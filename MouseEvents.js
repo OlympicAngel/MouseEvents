@@ -1,32 +1,33 @@
 const spawn = require('child_process').spawn;
-const path = __dirname + '/bin/MiceDetect.exe';
+const path = __dirname + '/bin/MiceDetect.exe'; //path to c# executable - created at "C# build" folder (https://github.com/OlympicAngel/MouseEvents/tree/main/C%23%20build)
 
-var child = spawn(path);
+var child = spawn(path); // opens executable
 
-child.stdout.on('data', HandleBinaryOutput);
+child.stdout.on('data', HandleBinaryOutput); // transfer all output into stdout handler
 
+// gets and converts all data from executable into json object and then calling events depends on "action" key passed from executable
 function HandleBinaryOutput(data) {
     data = data.toString().trim();// normalize output
-    data = data.replace(/'/g, '"');
+    data = data.replace(/'/g, '"'); // executable pass json-string with ' instead of "
     let miceData;
     try {
         miceData = JSON.parse(data); //convert string output into json e.g. {action:"move",cords:[0,0]}
     } catch (e) {
-        return console.log("error: " + e + "\n" + data);
+        return console.log("error: " + e + "\n" + data); //in case of parse error or tampering with the exe (as it should not ouput anything but json data)
     }
 
 
     //handles all events callback
     events.any.forEach((cb) => {
-        cb(miceData);
+        cb(miceData); // callback trigger 
     })
 
     //handles specific evetn callback
     const eventCB_arr = events[miceData.action] || [];
-    if (!eventCB_arr)
+    if (!eventCB_arr) // if action is not event ?
         return;
     eventCB_arr.forEach((cb) => {
-        cb(miceData);
+        cb(miceData); // callback trigger 
     })
 }
 
