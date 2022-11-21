@@ -12,7 +12,10 @@ Simple module that adds Global mouse events using C# binary (**Windows only**)
 ```js
     var MouseEvents = require('@olympicangel/mouse-events');
 
-    MouseEvents.on("move", console.log) // will output every mouse movement, outputs something like: {action:"move",cords:[0,0]}
+    MouseEvents.on("move", console.log)
+    // will output every mouse movement
+    // the output is object: 
+    // { action: 'move', cords: [ 960, 528 ] }
 ```
 
 
