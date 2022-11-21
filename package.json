@@ -1,5 +1,5 @@
 {
-  "name": "mouse-events",
+  "name": "@olympicangel/mouse-events",
   "version": "1.0.0",
   "description": "Simple module that adds Global mouse events using C# binary ()\u001b[DWindows only)",
   "main": "MouseEvents.js",
