@@ -1,0 +1,50 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "MiceDetect/1.0.0": {
+        "dependencies": {
+          "MouseKeyHook": "5.6.0",
+          "MouseKeyHook.NetCore": "5.6.1.1"
+        },
+        "runtime": {
+          "MiceDetect.dll": {}
+        }
+      },
+      "MouseKeyHook/5.6.0": {
+        "runtime": {
+          "lib/net40/Gma.System.MouseKeyHook.dll": {
+            "assemblyVersion": "5.6.130.0",
+            "fileVersion": "5.6.130.0"
+          }
+        }
+      },
+      "MouseKeyHook.NetCore/5.6.1.1": {}
+    }
+  },
+  "libraries": {
+    "MiceDetect/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "MouseKeyHook/5.6.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-xDNM10IfRED0+k78O9VvY0/suqeNJVg6GttEFPP/N4CEMujwVrfU+UatFN7Rb+gdjqIfhKblz7/nG3pUQmHaJg==",
+      "path": "mousekeyhook/5.6.0",
+      "hashPath": "mousekeyhook.5.6.0.nupkg.sha512"
+    },
+    "MouseKeyHook.NetCore/5.6.1.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-MgliDV/5e9kiYQ0D9lPlYRwt1aluIlGM3SQC4UZyT4BQN8KyNimdsDZQQc4t6HdY7QBngt5cbxFTKnOad/rm0w==",
+      "path": "mousekeyhook.netcore/5.6.1.1",
+      "hashPath": "mousekeyhook.netcore.5.6.1.1.nupkg.sha512"
+    }
+  }
+}
