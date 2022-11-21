@@ -1,7 +1,8 @@
-MouseDetect
+MouseDetect w/ Node.js
 =========
 
 Simple module that adds Global mouse events using C# binary (**Windows only**)
+for node.js only - doesnt work for browser..
 
 ## Installation
 
