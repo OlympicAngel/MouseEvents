@@ -1,4 +1,13 @@
-    var MouseEvents = require('/mouse-events.js');
+// this simple register every event there is to test if its gets it or not.
+// in order to test it there is a need to do this list with your mouse once running:
+// - click and release left click - check to see if it gets it.
+// - click and release right click - check to see if it gets it.
+// ^^ thid should trigger 4 events total: left_down & left_up, right_up & right_down.
+// after that move ypu mouse - that shoud trigger a bunch ofmove events.
+// for wheel just scoll ypur wheel - doesnt use keyboard pageup/down use actuall mouse - wheel clicks should not trigger events
+// and after each test it also should trigger "all" event.
+
+var MouseEvents = require('/mouse-events.js');
 
     // should triggers for each mouse movement even if its 1 pixel or so..
     MouseEvents.on("move", (e)=>{
