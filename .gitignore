@@ -8,6 +8,6 @@ node_modules/
 .env
 
 
-C# build/bin/
-C# build/obj/
-C# build/.vs/
+C\# build/bin/
+C\# build/obj/
+C\# build/.vs/
